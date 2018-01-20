@@ -20,7 +20,7 @@ public class TestJob {
 
 
 
-		System.setProperty("webdriver.chrome.driver", "/Users/tpunbang/Documents/Nikhilesh/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Users/shilpa/chromedriver");
 
 		driver = new ChromeDriver();
 
