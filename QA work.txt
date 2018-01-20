@@ -1,0 +1,79 @@
+import java.util.concurrent.TimeUnit;
+
+
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+public class TestJob {
+
+
+
+	public static void main(String[] args) throws InterruptedException {
+
+		WebDriver driver;
+
+
+
+		System.setProperty("webdriver.chrome.driver", "/Users/tpunbang/Documents/Nikhilesh/chromedriver");
+
+		driver = new ChromeDriver();
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		driver.get("http://www.qaworks.com/"); // url
+
+		
+
+		By linkContactus = By.xpath("//nav[@aria-label='Main Menu']//a/span[contains(text(),'CONTACT US')]");
+
+		By txtName = By.xpath("//input[@name='your-name']");
+
+		By txtEmail = By.xpath("//input[@name='your-email']");
+
+		By txtCompany = By.xpath("//input[@name='your-company']");
+
+		By txtMessage = By.xpath("//textarea[@name='your-message']");
+
+		By btnSend = By.xpath("//input[@id='contact-us-send']");
+
+		
+
+
+
+		String strName = "j.Bloggs";
+
+		String strCompany = "test automation";
+
+		String strEmail = "j.Bloggs@qaworks.com";
+
+		String strMessage = "please contact me I want to find out more";
+
+
+
+		driver.findElement(linkContactus).click(); // click on CONTACT US
+
+		driver.findElement(txtName).sendKeys(strName); // Enter Name
+
+		driver.findElement(txtEmail).sendKeys(strEmail); // Enter Email
+
+		driver.findElement(txtCompany).sendKeys(strCompany); // Enter Company
+
+		driver.findElement(txtMessage).sendKeys(strMessage); // Enter Message
+
+		Thread.sleep(3000);
+
+		driver.findElement(btnSend).click(); // click on Send Button
+
+
+
+	}
+
+
+
+}
