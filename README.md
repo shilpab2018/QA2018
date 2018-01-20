@@ -1,5 +1,6 @@
 # QA2018
 Shilpa Bhowmick
+attached file with xpath & method for the use case automation
 Use Eclipse to run the code with help of selenium.WebDriver and selenium chromedriver import
 Platform limitation - Maven is used as build automation tool.
 Dependencies - Browser drivers, Selenium webdriver, Maven, Java
